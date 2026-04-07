@@ -232,7 +232,7 @@ void readFromFile()
     }
 
     fclose(fp);
-    printf("Loaded %d contact(s) from phonebook.txt\n", currentSize);
+    printf("Loaded %d contact(s) from phonebook\n", currentSize);
 }
 
 void saveToFile()
@@ -256,7 +256,7 @@ void saveToFile()
     }
 
     fclose(fp);
-    printf("%d contact(s)is Saved\n", currentSize);
+    printf("%d contact is Saved\n", currentSize);
 }
 
 /* Main function for testing */
