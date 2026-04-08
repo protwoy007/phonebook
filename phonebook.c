@@ -6,6 +6,7 @@
 #define MAX_SIZE 100
 #define MAX_NAME_LEN 50
 #define MAX_PHONE_LEN 20
+#define VERSION "1.0.0"
 
 /* Define the missing types */
 typedef enum {
@@ -260,10 +261,18 @@ void saveToFile()
 }
 
 /* Main function for testing */
-int main() {
+int main(int argc, char *argv[]) {
     int choice;
     char searchKey[50];
     char mobileNumber[20];
+
+    // Check for version flag
+    if (argc > 1) {
+        if (strcmp(argv[1], "--version") == 0 || strcmp(argv[1], "-v") == 0) {
+            printf("Phonebook version %s\n", VERSION);
+            return 0;
+        }
+    }
 
     // Try to load existing phonebook
     readFromFile();
