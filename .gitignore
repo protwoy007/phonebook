@@ -1,0 +1,9 @@
+# Compiled binary
+phonebook
+
+# Object files
+*.o
+*.obj
+
+# Data files
+phonebook.txt
