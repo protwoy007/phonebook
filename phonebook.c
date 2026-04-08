@@ -6,6 +6,7 @@
 #define MAX_SIZE 100
 #define MAX_NAME_LEN 50
 #define MAX_PHONE_LEN 20
+#define VERSION "1.0.0"
 
 /* Define the missing types */
 typedef enum {
@@ -276,7 +277,8 @@ int main() {
         printf("4. Search by Last Name\n");
         printf("5. Search by Mobile Number\n");
         printf("6. Remove Contact by Mobile Number\n");
-        printf("7. Exit\n");
+        printf("7. Show Version\n");
+        printf("8. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
         getchar(); // Clear the newline character
@@ -313,12 +315,15 @@ int main() {
                 removeEntry(mobileNumber);
                 break;
             case 7:
+                printf("Phonebook Version: %s\n", VERSION);
+                break;
+            case 8:
                 printf("Goodbye!\n");
                 break;
             default:
                 printf("Invalid choice!\n");
         }
-    } while(choice != 7);
+    } while(choice != 8);
 
     return 0;
 }
